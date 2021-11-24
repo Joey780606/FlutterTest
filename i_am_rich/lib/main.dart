@@ -11,7 +11,8 @@ void main() {
         ),
         body: Center( //Center也是一個 widget
           child: Image(
-            image: NetworkImage('https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg'),  //字串只要用single quote
+            //images: NetworkImage('https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg'),  //字串只要用single quote
+            image: AssetImage('images/diamond.png'),
           ),
         ),
       ),
