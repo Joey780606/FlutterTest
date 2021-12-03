@@ -65,3 +65,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
+
+    - family: Source San Pro #可以有空白
+      fonts:
+        - asset: fonts/SourceSansPro-Regular.ttf #好像只能放一個,因為跟 family 是1:1的關係,放第二個 asset 也沒用

@@ -29,13 +29,24 @@ class MyApp extends StatelessWidget {
                 backgroundImage: AssetImage('images/images001.jfif'),  //jfif 也可以用哦, jpeg file interchange format
               ),
               Text(
-                  'Angelins Jolie',
+                  'Angelina Jolie',
                 style: TextStyle(
+                  fontFamily: 'Pacifico',
                   fontSize: 40.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
-              )
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source San Pro', //可以有空白
+                  color: Colors.teal.shade100,
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           )
         ),
