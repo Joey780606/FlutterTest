@@ -19,21 +19,45 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            //margin: EdgeInsets.all(20.0), //全部
-            // margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0), //上下
-            // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-            margin: EdgeInsets.only(left: 30.0),  //元件間間隔
-            padding: EdgeInsets.all(20.0),  //元件自己的內縮
-            color: Colors.white,
-            child: Text('Hello')
+          child: Column(
+           //mainAxisSize: MainAxisSize.min,  //表示Column會在垂直方向占用儘可能少的空間(
+           //verticalDirection: VerticalDirection.up,  //表示會由下面往"上"長, down是default值
+           // mainAxisAlignment: MainAxisAlignment.spaceEvenly, //預設是start,最上面, 若end,是最下面, center, spaceEvenly,
+            //crossAxisAlignment: CrossAxisAlignment.stretch, //stretch:會把所有元件的width變成 double.infinity(無限長),這樣就不用每個Container都設 double.infinity 了
+            children: <Widget>[
+              Container(
+              height: 100.0,
+              width: 30.0,
+              color: Colors.white,
+              child: Text('Container 1'),
+              ),
+              SizedBox( //中間會產生空格
+                height: 20.0,
+                //width: 30.0,
+              ),
+              Container(
+                height: 100.0,
+                width: 150.0,
+                color: Colors.blue,
+                child: Text('Container 2'),
+              ),
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.red,
+                child: Text('Container 3'),
+              ),
+              Container(
+                width: double.infinity,
+                height: 10.0,
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
+
